@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _showLogo() {
     return Image(
-      image: AssetImage('assets/vehicleslogo.jpg'),
+      image: AssetImage('assets/vehicles_logo.png'),
       width: 300,
       );
   }
@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
       'password': _password,
     };
 
-    var url = Uri.parse('${Constans.apiUrl}/api/Account/CreateToken');
+    var url = Uri.parse('${Constants.apiUrl}/api/Account/CreateToken');
     var response = await http.post(
       url,
       headers: {
