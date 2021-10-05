@@ -5,6 +5,7 @@ import 'package:vehicles_app/screens/brands_screen.dart';
 import 'package:vehicles_app/screens/document_types_screen.dart';
 import 'package:vehicles_app/screens/login_screen.dart';
 import 'package:vehicles_app/screens/procedures_screen.dart';
+import 'package:vehicles_app/screens/vehicle_types_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final Token token;
@@ -108,7 +109,14 @@ class _HomeScreenState extends State<HomeScreen> {
           ListTile(
             leading: Icon(Icons.toys),
             title: const Text('Tipos de Vehículos'),
-            onTap: () { },
+            onTap: () { 
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context) => VehicleTypesScreen(token: widget.token,)
+                )
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.people),
