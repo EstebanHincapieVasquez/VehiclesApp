@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vehicles'),
+        title: Text('Vehículos'),
       ),
       body: _getBody(),
       drawer: widget.token.user.userType == 0 
