@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(height: 50,),
+                SizedBox(height: 40,),
                 _showLogo(),
                 SizedBox(height: 20,),
                 _showEmail(),
@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
       image: AssetImage('assets/vehicles_logo.png'),
       width: 300,
       fit: BoxFit.fill,
-      );
+    );
   }
 
   Widget _showEmail() {
@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
             borderRadius: BorderRadius.circular(10)
           ),
         ),
-        onChanged: (value){
+        onChanged: (value) {
           _email = value;
         },
       ),
@@ -284,5 +284,5 @@ class _LoginScreenState extends State<LoginScreen> {
     await prefs.setBool('isRemembered', true);
     await prefs.setString('userBody', body);
   }
-
+  
 }

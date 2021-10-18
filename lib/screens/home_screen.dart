@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vehículos'),
+        title: Text('Vehicles'),
       ),
       body: _getBody(),
       drawer: widget.token.user.userType == 0 
@@ -47,8 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 300,
               fit: BoxFit.cover
             ),
-        ),
-        SizedBox(height: 30,),
+          ),
+          SizedBox(height: 30,),
           Center(
             child: Text(
               'Bienvenid@ ${widget.token.user.fullName}',
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isRemembered', false);
     await prefs.setString('userBody', '');
-
+    
     Navigator.pushReplacement(
       context, 
       MaterialPageRoute(
@@ -198,4 +198,4 @@ class _HomeScreenState extends State<HomeScreen> {
       )
     ); 
   }
-} 
+}

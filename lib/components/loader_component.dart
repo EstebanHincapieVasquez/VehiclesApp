@@ -26,4 +26,4 @@ class LoaderComponent extends StatelessWidget {
       ),
     );
   }
-} 
+}

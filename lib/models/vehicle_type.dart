@@ -15,4 +15,4 @@ class VehicleType {
     data['description'] = this.description;
     return data;
   }
-} 
+}

@@ -1,6 +1,5 @@
-import 'document_type.dart';
-
 import 'package:vehicles_app/models/vehicle.dart';
+import 'document_type.dart';
 
 class User {
   String firstName = '';

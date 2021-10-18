@@ -293,7 +293,7 @@ class _UsersScreenState extends State<UsersScreen> {
       _getUsers();
     }
   }
-
+  
   void _goInfoUser(User user) async {
     String? result = await Navigator.push(
       context, 
@@ -308,4 +308,4 @@ class _UsersScreenState extends State<UsersScreen> {
       _getUsers();
     }
   }
-} 
+}

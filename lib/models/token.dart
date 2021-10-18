@@ -17,8 +17,8 @@ class Token {
     id: '', 
     userName: '', 
     email: '', 
-    phoneNumber: '',
-    vehicles: [],
+    phoneNumber: '', 
+    vehicles: [], 
     vehiclesCount: 0
   );
 
@@ -37,4 +37,4 @@ class Token {
     data['user'] = this.user.toJson();
     return data;
   }
-} 
+}
