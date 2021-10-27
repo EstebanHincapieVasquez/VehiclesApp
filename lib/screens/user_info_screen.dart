@@ -1,4 +1,5 @@
 import 'package:adaptive_dialog/adaptive_dialog.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 
@@ -76,13 +77,18 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.circular(50),
-                child: FadeInImage(
-                  placeholder: AssetImage('assets/vehicles_logo.png'), 
-                  image: NetworkImage(_user.imageFullPath),
-                  width: 100,
+                child: CachedNetworkImage(
+                  imageUrl: _user.imageFullPath,
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                  fit: BoxFit.cover,
                   height: 100,
-                  fit: BoxFit.cover
-                ),
+                  width: 100,
+                  placeholder: (context, url) => Image(
+                    image: AssetImage('assets/vehicles_logo.png'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 100,
+                  ),
               ),
               Positioned(
                 bottom: 0,
